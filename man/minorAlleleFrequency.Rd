@@ -2,7 +2,7 @@
 \alias{minorAlleleFrequency}
 \alias{filterSNPs}
 \alias{mafHist}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{Minor Allele Frequency (MAF) Detection
 }
 \description{
@@ -13,7 +13,7 @@ minorAlleleFrequency(SNPmat)
 filterSNPs(SNPmat, minMAF = 0.05)
 mafHist(SNPmat)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{SNPmat}{
      Matrix of SNPs to used in the function.
@@ -36,11 +36,6 @@ mafHist(SNPmat)
 \author{Olivia Obenland
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 SNPmat <- matrix(c(2,4,6,8,10,12,14,16,18,3,6,9,12,15,18), nrow = 5, ncol = 3)
 

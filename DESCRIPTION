@@ -10,4 +10,4 @@ Description: This package includes functions to estimate minor allele frequencie
   from numerical SNP data, plot histograms of minor allele frequencies, and
   filter SNP data based on minor allele frequencies.
 Url: https://github.com/obenlan2/Lab-9
-License: GNU GPL-2.0
+License: GPL-2

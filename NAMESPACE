@@ -1,1 +1,2 @@
-export(minorAlleleFrequency, filterSNPs, mafHis)
+export(minorAlleleFrequency, filterSNPs, mafHist)
+importFrom("graphics", "hist")
