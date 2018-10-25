@@ -3,11 +3,10 @@
 \alias{filterSNPs}
 \alias{mafHist}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
+\title{Minor Allele Frequency (MAF) Detection
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+A set of functions that allow for detection of SNP MAF, allow for filtering SNPs by MAF, and creating a histogram of SNP MAF.
 }
 \usage{
 minorAlleleFrequency(SNPmat)
@@ -17,27 +16,24 @@ mafHist(SNPmat)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{SNPmat}{
-%%     ~~Describe \code{SNPmat} here~~
+     Matrix of SNPs to used in the function.
 }
+  \item{minMAF}{
+  Minimun MAF value of SNPs you'd like to keep. Default value is set to 0.05 but can be set to other values as needed
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+\item{minorAlleleFrequency}{
+   Returns a vector of MAFs.
 }
-\references{
-%% ~put references to the literature/web site here ~
+  \item{filterSNPs}{
+   Returns a matrix in the same format as the inputed matrix but with columns removed for SNPs with very rare alleles.
 }
-\author{
-%%  ~~who you are~~
+  \item{mafHis}{
+  Draws a histogram of SNP MAFs.
 }
-\note{
-%%  ~~further notes~~
+}
+\author{Olivia Obenland
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -46,20 +42,9 @@ mafHist(SNPmat)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+SNPmat <- matrix(c(2,4,6,8,10,12,14,16,18,3,6,9,12,15,18), nrow = 5, ncol = 3)
 
-## The function is currently defined as
-function (SNPmat) 
-{
-    maf <- colMeans(SNPmat, na.rm = TRUE)/2
-    common <- which(maf > 0.5)
-    maf[common] <- 1 - maf[common]
-    return(maf)
-  }
-}
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+minorAlleleFrequency(SNPmat)
+filterSNPs(SNPmat, minMAF = 0.05)
+mafHist(SNPmat)
+
