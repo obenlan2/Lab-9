@@ -1,0 +1,13 @@
+Package: SNPfreq
+Version: 0.0
+Date: 2018-10-25
+Title: Minor Allele Frequency (MAF) Detection
+Authors@R: person("Olivia", "Obenland", role = c("aut", "cre"),
+                  email = "obenlan2@illinois.edu")
+Author: Olivia Obenland [aut, cre]
+Maintainer: Olivia Obenland <obenlan2@illinois.edu>
+Description: This package includes functions to estimate minor allele frequencies
+  from numerical SNP data, plot histograms of minor allele frequencies, and
+  filter SNP data based on minor allele frequencies.
+Url: https://github.com/obenlan2/Lab-9
+License: GNU GPL-2.0
